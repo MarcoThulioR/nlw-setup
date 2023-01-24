@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #09090a;
+  color: white;
+  height: 100vh; /* Define a altura do body: 100% da viewport height (altura) */
+
+  /*  display: grid;            /* Tipo de tela (visualização): grid */
+  /*  place-items: center;      /* Define o local dos itens de acordo com o display: centro */
+}
+
+header {
+  display: flex;
+  align-items: center; /* Só pode ser usado com o display em flex */
+  justify-content: space-between; /*  Alinha o conteúdo com espaço entre. Nesse caso, no header existem 2 elementos. A logo e o botão. Assim, sempre haverá espaço entre eles.  */
+  padding: 48px;
+  position: fixed;
+  width: 100%;
+  background-color: #09090a;
+}
+
+button {
+  padding: 16px 24px; /*  Primeiro parâmetro: Top and Botton; Segundo parâmetro: Right and Left.  */
+  border-radius: 8px;
+  border: 1px solid #8b5cf6;
+  background-color: transparent;
+  color: white;
+
+  display: flex; /*  display: inline;           /* PADRÃO   */
+  align-items: center;
+  gap: 12px; /*disponível apenas para display flex. É o espaço entre todos os elementos. */
+
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+#form-habits {
+  display: flex;
+  padding: 182px 48px 48px;
+  width: fit-content;
+}
+
+.habits {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+  margin-top: -10px;
+
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.day div {
+  margin-bottom: 8px;
+
+  font-family: "Roboto Mono";
+  font-size: 12px;
+  line-height: 125%;
+
+  color: #a1a1aa;
+
+  text-align: center;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 64px;
+  height: 64px;
+
+  border: 2px solid #27272a;
+  border-radius: 8px;
+
+  background-color: #18181b;
+}
+/*  pseudo-selector */
+input:checked {
+  background-color: #a78bfa;
+  border: 2px solid #27272a;
+}
+
+@media (max-width: 570px) {
+  button div {
+    display: none;
+  }
+}
